@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./assets/images/favicon-32x32.png"
+		/>
+
+		<title>Frontend Mentor | Mortgage repayment calculator</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 11px;
+				text-align: center;
+			}
+			.attribution a {
+				color: hsl(228, 45%, 44%);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Mortgage Calculator</h1>
+			<button>Clear All</button>
+		</header>
+		<main>
+			<section>
+				<form action="">
+					<fieldset>
+						<div>
+							<!-- <label for="amount">Mortgage Amount</label>
+							<input type="text" id="amount" /> -->
+							<label for="amount">Mortgage Amount</label>
+              <div>
+                <span>&pound;</span>
+                <input type="text" id="amount" />
+              </div>
+						</div>
+						<div>
+							<!-- <label for="term">Mortgage Term</label>
+							<input type="text" id="term" /> -->
+							<label for="term">Mortgage Term</label>
+              <div>
+                <input type="text" id="term" />
+                <span>years</span>
+              </div>
+						</div>
+						<div>
+							<!-- <label for="interest-rate">Interest Rate</label>
+							<input type="text" id="interest-rate" /> -->
+							<label for="interest-rate">Interest Rate</label>
+              <div>
+                <input type="text" id="interest-rate" />
+                <span>&percnt;</span>
+              </div>
+						</div>
+					</fieldset>
+					<fieldset>
+            <legend>Mortgage Type</legend>
+						<div class="">
+              <input type="radio" id="repayment" name="mortgage-type"/>
+							<label for="repayment">Repayment</label>
+						</div>
+						<div class="">
+              <input type="radio" id="interst-only" name="mortgage-type"/>
+							<label for="interst-only">Interest Only</label>
+						</div>
+					</fieldset>
+					<button type="submit">
+						<img
+							src="./assets/images/icon-calculator.svg"
+							alt="calculator icon"
+						/>Calculate Repayments
+					</button>
+				</form>
+			</section>
+			<section>
+				<div>
+					<img src="./assets/images/illustration-empty.svg" alt="" />
+					<h2>Results shown here</h2>
+					<p>
+						Complete the form and click “calculate repayments” to
+						see what your monthly repayments would be.
+					</p>
+				</div>
+				<div>
+					<h2>Your results</h2>
+					<p>
+						Your results are shown below based on the information
+						you provided. To adjust the results, edit the form and
+						click “calculate repayments” again.
+					</p>
+					<div>
+						<div>
+							<h3>Your monthly repayments</h3>
+							<p></p>
+						</div>
+						<div>
+							<h3>Total you'll repay over the term</h3>
+              <p></p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge"
+				>Frontend Mentor</a
+			>. Coded by <a href="#">Your Name Here</a>.
+		</div>
+	</body>
+</html>
