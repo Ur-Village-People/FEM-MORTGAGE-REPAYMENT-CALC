@@ -1,8 +1,6 @@
 const form = document.querySelector('.form__values');
 const clearBtn = document.querySelector('.header__clear-btn');
 const resultSection = document.querySelector('.result');
-
-// Move these selectors outside so both functions can use them
 const monthlyValue = document.querySelector('.result__completed--group__display__repay-monthly-value');
 const overallValue = document.querySelector('.result__completed--group__display__repay-overall-value');
 form.addEventListener('submit', (e) => {
@@ -26,7 +24,6 @@ form.addEventListener('submit', (e) => {
     overallValue.textContent = `£${totalRepay.toLocaleString(undefined, {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
     resultSection.classList.add('is-active');
 });
-
 clearBtn.addEventListener('click', () => {
     form.reset();
     resultSection.classList.remove('is-active');
