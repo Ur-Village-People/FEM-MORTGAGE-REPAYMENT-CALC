@@ -1,0 +1,11 @@
+@use '../util/' as *;
+.container {
+    max-width: to-rem(920);
+    background: var(--white);
+    display: flex;
+    padding: to-rem(24);
+    flex-direction: column;
+    @include breakpoint(medium) {
+        flex-direction: row;
+    }
+}

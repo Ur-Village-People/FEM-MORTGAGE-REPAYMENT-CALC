@@ -1,0 +1,9 @@
+@use '../util' as *;
+h1,
+h2 {
+    font-size: to-rem(20);
+    color: var(--slate-900);
+    @include breakpoint(medium) {
+        font-size: to-rem(24);
+    }
+}

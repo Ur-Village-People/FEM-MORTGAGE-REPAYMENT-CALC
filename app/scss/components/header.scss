@@ -1,0 +1,21 @@
+@use '../util' as *;
+.header {
+    display: flex;
+    justify-content: space-between;
+    @include breakpoint(medium) {
+        flex-direction: column;
+        gap: to-rem(10);
+    }
+    &__title {
+        font-size: to-rem(24);
+        line-height: 1.2;
+    }
+    &__clear-btn {
+        font-size: to-rem(16);
+        font-weight: 500;
+        border: none;
+        background: transparent;
+        text-decoration: underline;
+        color: var(--slate-700);
+    }
+}

@@ -1,0 +1,75 @@
+@use '../util' as *;
+.form{
+    &__values {
+        &__fieldset {
+            border: none;
+            &__input-group {
+                &__title {
+                    color: var(--slate-700);
+                }
+                &__input-container {
+                    border: to-rem(1) solid var(--slate-700);
+                    display: flex;
+                    &:hover,
+                    &:focus {
+                        .form__values__fieldset__input-group__input-container__span {
+                            background: var(--lime);
+                        }
+                        border: to-rem(1) solid var(--lime);
+                    }
+                    &__span {
+                        background: var(--slate-300);
+                        font-size: to-rem(18);
+                        padding: to-rem(12) to-rem(16);
+                        color: var(--slate-900);
+                    }
+                    &__input {
+                        border: none;
+                        font-size: to-rem(18);
+                        padding: to-rem(12) to-rem(16);
+                        outline: none;
+                        flex: 1;
+                    }
+                }
+            }
+        }
+        &__submit-btn {
+            width: 100%;
+            padding: to-rem(12) to-rem(16);
+            font-size: to-rem(18);
+            border-radius: to-rem(42);
+            border: none;
+            background: var(--lime);
+            @include breakpoint(medium) {
+                width: fit-content;
+            }
+        }
+    }
+    &__type {
+        border: none;
+        &__title {
+            color: var(--slate-700);
+        }
+        &__input-group {
+            width: 100%;
+            padding: to-rem(12) to-rem(16);
+            border: to-rem(1) solid var(--slate-700);
+            &:hover,
+            &:focus {
+                background: var(--lime) 0.3;
+                border-color: var(--lime);
+                .form__type__input-group__input {
+                    border-color: var(--lime);
+                }
+            }
+            &__input {
+
+            }
+            &__title {
+                color: var(--slate-900);
+                font-size: to-rem(16);
+                font-weight: 900;
+            }
+        }
+    }
+}

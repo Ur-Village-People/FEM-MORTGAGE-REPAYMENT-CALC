@@ -9,7 +9,7 @@ const browsersync = require('browser-sync').create();
 const webpack = require('webpack-stream');
 const obfuscator = require('gulp-javascript-obfuscator');
 function copyTask() {
-    return src(['*.html'], {base: '.'}) 
+    return src(['*.html', 'assets/**/*'], {base: '.'})
     .pipe(dest('dist'));
 }
 function scssTask() {

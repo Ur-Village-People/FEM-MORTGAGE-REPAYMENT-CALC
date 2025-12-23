@@ -11,100 +11,104 @@
 			sizes="32x32"
 			href="./assets/images/favicon-32x32.png"
 		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="srcript.js"></script>
 
 		<title>Frontend Mentor | Mortgage repayment calculator</title>
-
-		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-		<style>
-			.attribution {
-				font-size: 11px;
-				text-align: center;
-			}
-			.attribution a {
-				color: hsl(228, 45%, 44%);
-			}
-		</style>
 	</head>
 	<body>
-		<header>
-			<h1>Mortgage Calculator</h1>
-			<button>Clear All</button>
-		</header>
-		<main>
-			<section>
-				<form action="">
-					<fieldset>
-						<div>
+		<main class="container">
+			<section class="form">
+				<header class="header">
+					<h1 class="header__title">Mortgage Calculator</h1>
+					<button class="header__clear-btn">Clear All</button>
+				</header>
+				<form action="" class="form__values">
+					<fieldset class="form__values__fieldset">
+						<div class="form__values__fieldset__input-group">
 							<!-- <label for="amount">Mortgage Amount</label>
 							<input type="text" id="amount" /> -->
-							<label for="amount">Mortgage Amount</label>
-              <div>
-                <span>&pound;</span>
-                <input type="text" id="amount" />
-              </div>
+							<label for="amount" class="form__values__fieldset__input-group__title">Mortgage Amount</label>
+							<div class="form__values__fieldset__input-group__input-container">
+								<span class="form__values__fieldset__input-group__input-container__span">&pound;</span>
+								<input type="text" id="amount" class="form__values__fieldset__input-group__input-container__input" />
+							</div>
 						</div>
-						<div>
+						<div class="form__values__fieldset__input-group">
 							<!-- <label for="term">Mortgage Term</label>
 							<input type="text" id="term" /> -->
-							<label for="term">Mortgage Term</label>
-              <div>
-                <input type="text" id="term" />
-                <span>years</span>
-              </div>
+							<label for="term" class="form__values__fieldset__input-group__title">Mortgage Term</label>
+							<div class="form__values__fieldset__input-group__input-container">
+								<input type="text" id="term" class="form__values__fieldset__input-group__input-container__input"/>
+								<span class="form__values__fieldset__input-group__input-container__span">years</span>
+							</div>
 						</div>
-						<div>
+						<div class="form__values__fieldset__input-group">
 							<!-- <label for="interest-rate">Interest Rate</label>
 							<input type="text" id="interest-rate" /> -->
-							<label for="interest-rate">Interest Rate</label>
-              <div>
-                <input type="text" id="interest-rate" />
-                <span>&percnt;</span>
-              </div>
+							<label for="interest-rate" class="form__values__fieldset__input-group__title">Interest Rate</label>
+							<div class="form__values__fieldset__input-group__input-container">
+								<input type="text" id="interest-rate" class="form__values__fieldset__input-group__input-container__input"/>
+								<span class="form__values__fieldset__input-group__input-container__span">&percnt;</span>
+							</div>
 						</div>
 					</fieldset>
-					<fieldset>
-            <legend>Mortgage Type</legend>
-						<div class="">
-              <input type="radio" id="repayment" name="mortgage-type"/>
-							<label for="repayment">Repayment</label>
+
+					<fieldset class="form__type">
+						<legend class="form__type__title">Mortgage Type</legend>
+						<div class="form__type__input-group">
+							<input
+								type="radio"
+								id="repayment"
+								name="mortgage-type"
+								class="form__type__input-group__input"
+							/>
+							<label for="repayment" class="form__type__input-group__title">Repayment</label>
 						</div>
-						<div class="">
-              <input type="radio" id="interst-only" name="mortgage-type"/>
-							<label for="interst-only">Interest Only</label>
+						<div class="form__type__input-group">
+							<input
+								type="radio"
+								id="interst-only"
+								name="mortgage-type"
+								class="form__type__input-group__input"
+							/>
+							<label for="interst-only" class="form__type__input-group__title">Interest Only</label>
 						</div>
 					</fieldset>
-					<button type="submit">
+					<button type="submit" class="form__values__submit-btn">
 						<img
 							src="./assets/images/icon-calculator.svg"
 							alt="calculator icon"
-						/>Calculate Repayments
+							class="form__value__submit-btn__icon"
+						/> Calculate Repayments
 					</button>
 				</form>
 			</section>
-			<section>
-				<div>
-					<img src="./assets/images/illustration-empty.svg" alt="" />
-					<h2>Results shown here</h2>
-					<p>
+
+			<section class="result">
+				<div class="result__empty">
+					<img src="./assets/images/illustration-empty.svg" alt="" / class="result__empty__img">
+					<h2 class="result__empty__title">Results shown here</h2>
+					<p class="result__empty__text">
 						Complete the form and click “calculate repayments” to
 						see what your monthly repayments would be.
 					</p>
 				</div>
-				<div>
-					<h2>Your results</h2>
-					<p>
+				<div  class="result__completed">
+					<h2 class="result__completed__title">Your results</h2>
+					<p class="result__completed__text">
 						Your results are shown below based on the information
 						you provided. To adjust the results, edit the form and
 						click “calculate repayments” again.
 					</p>
-					<div>
-						<div>
-							<h3>Your monthly repayments</h3>
-							<p></p>
+					<div class="result__completed">
+						<div class="result__completed__display">
+							<h3 class="result__completed__display__repay-title">Your monthly repayments</h3>
+							<p class="result__completed__display__repay-monthly-value"></p>
 						</div>
-						<div>
-							<h3>Total you'll repay over the term</h3>
-              <p></p>
+						<div class="result__completed__display">
+							<h3 class="result__completed__display__repay-title">Total you'll repay over the term</h3>
+							<p class="result__completed__display__repay-overall-value"></p>
 						</div>
 					</div>
 				</div>
