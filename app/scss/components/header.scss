@@ -1,10 +1,14 @@
 @use '../util' as *;
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    margin-bottom: to-rem(20);
+    gap: to-rem(10);
     @include breakpoint(medium) {
-        flex-direction: column;
-        gap: to-rem(10);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: to-rem(24);
     }
     &__title {
         font-size: to-rem(24);

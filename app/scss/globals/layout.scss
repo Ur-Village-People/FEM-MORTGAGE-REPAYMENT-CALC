@@ -1,11 +1,19 @@
 @use '../util/' as *;
 .container {
-    max-width: to-rem(920);
+    // max-width: to-rem(920);
+    max-width: none;
     background: var(--white);
     display: flex;
-    padding: to-rem(24);
     flex-direction: column;
     @include breakpoint(medium) {
         flex-direction: row;
+        align-items: stretch;
+        border-radius: to-rem(20);
+    }
+    &>section {
+        @include breakpoint(medium) {
+            width: 50%;
+            flex-shrink: 0;
+        }
     }
 }

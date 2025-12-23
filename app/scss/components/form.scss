@@ -1,15 +1,39 @@
 @use '../util' as *;
 .form{
+    padding: to-rem(24);
     &__values {
         &__fieldset {
             border: none;
+            margin-bottom: to-rem(20);
+            display: flex;
+            flex-direction: column;
+            gap: to-rem(20);
+            @include breakpoint(medium) {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto;
+                margin-bottom: to-rem(24);
+                gap: to-rem(24);
+            }
             &__input-group {
+                min-width: 0;
+                @include breakpoint(medium) {
+                    &:first-child {
+                        grid-column: 1 / span 2;
+                    }
+                }
                 &__title {
+                    margin-bottom: to-rem(8);
                     color: var(--slate-700);
+                    display: inline-block;
                 }
                 &__input-container {
                     border: to-rem(1) solid var(--slate-700);
                     display: flex;
+                    border-radius: to-rem(5);
+                    overflow: hidden;
+                    align-items: center;
+                    min-width: 0;
                     &:hover,
                     &:focus {
                         .form__values__fieldset__input-group__input-container__span {
@@ -29,6 +53,8 @@
                         padding: to-rem(12) to-rem(16);
                         outline: none;
                         flex: 1;
+                        width: 0;
+                        min-width: 0;
                     }
                 }
             }
@@ -39,7 +65,11 @@
             font-size: to-rem(18);
             border-radius: to-rem(42);
             border: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: var(--lime);
+            gap: to-rem(8);
             @include breakpoint(medium) {
                 width: fit-content;
             }
@@ -47,6 +77,10 @@
     }
     &__type {
         border: none;
+        margin-bottom: to-rem(20);
+        @include breakpoint(medium) {
+            margin-bottom: to-rem(24);
+        }
         &__title {
             color: var(--slate-700);
         }
@@ -54,16 +88,22 @@
             width: 100%;
             padding: to-rem(12) to-rem(16);
             border: to-rem(1) solid var(--slate-700);
+            margin-top: to-rem(8);
+            border-radius: to-rem(5);
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: to-rem(8);
             &:hover,
             &:focus {
-                background: var(--lime) 0.3;
+                background: var(--lime-hover);
                 border-color: var(--lime);
-                .form__type__input-group__input {
-                    border-color: var(--lime);
-                }
             }
             &__input {
-
+                accent-color: var(--lime);
+                width: to-rem(20);
+                height: to-rem(20);
+                cursor: pointer;
             }
             &__title {
                 color: var(--slate-900);

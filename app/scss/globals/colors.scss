@@ -1,6 +1,7 @@
 :root {
     // PRIMARY
     --lime: hsl(61, 70%, 52%);
+    --lime-hover: hsl(60, 72%, 93%);
     --red: hsl(4, 69%, 50%);
     // NEUTRAL
     --white: hsl(0, 0%, 100%);
@@ -9,4 +10,5 @@
     --slate-500: hsl(200, 26%, 54%);
     --slate-700: hsl(200, 24%, 40%);
     --slate-900: hsl(202, 55%, 16%);
+    --slate-900-repayment: hsl(202, 56%, 12%);
 }

@@ -1,1 +1,81 @@
 @use '../util' as *;
+.result {
+    background: var(--slate-900);
+    padding: to-rem(24);
+    border-radius: 0 to-rem(20) to-rem(20)  to-rem(80);
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include breakpoint(medium) {
+        border-radius: 0;
+    }
+    &__empty {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: to-rem(24);
+        &__img {
+
+        }
+        &__title {
+            color: var(--white);
+        }
+        &__text {
+            color: var(--slate-700);
+            text-align: center;
+        }
+    }
+    &__completed {
+        display: none;
+        flex-direction: column;
+        gap: to-rem(24);
+        &__title {
+            color: var(--white);
+        }
+        &__text {
+            color: var(--slate-700);
+        }
+        &--group {
+            border-top: to-rem(3) solid var(--lime);
+            display: flex;
+            flex-direction: column;
+            gap: to-rem(24);
+            border-radius: to-rem(5);
+            background: var(--slate-900-repayment);
+            padding: to-rem(24);
+            &:first-child {
+                border-bottom: to-rem(1) solid var(--slate-700);
+            }
+            &__display {
+                &__repay-title {
+                    color: var(--slate-700);
+                }
+                &__repay-monthly-value {
+                    color: var(--lime);
+                    font-size: to-rem(40);
+                    @include breakpoint(medium) {
+                        font-size: to-rem(56);
+                    }
+                }
+                &__repay-overall-value {
+                    color: var(--white);
+                    font-size: to-rem(20);
+                    @include breakpoint(medium) {
+                        font-size: to-rem(24);
+                    }
+                }
+            }
+        }
+    }
+    &.is-active {
+        justify-content: flex-start;
+        .result__empty {
+            display: none;
+        }
+        .result__completed {
+            display: flex;
+        }
+    }
+}
