@@ -46,7 +46,7 @@
                         border: to-rem(2) solid var(--lime);
                     }
                     &__span {
-                        background: var(--slate-300);
+                        background: var(--slate-100);
                         font-size: to-rem(18);
                         padding: to-rem(12) to-rem(16);
                         color: var(--slate-700);
@@ -94,6 +94,7 @@
         }
         &__title {
             color: var(--slate-700);
+            font-weight: 700;
         }
         &__input-group {
             width: 100%;
