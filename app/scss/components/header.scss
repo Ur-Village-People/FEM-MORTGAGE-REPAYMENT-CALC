@@ -2,11 +2,13 @@
 .header {
     display: flex;
     flex-direction: column;
-    margin-bottom: to-rem(20);
+    margin-bottom: to-rem(28);
     gap: to-rem(10);
+    align-items: flex-start;
     @include breakpoint(medium) {
         flex-direction: row;
         justify-content: space-between;
+        align-items: center;
         align-items: center;
         margin-bottom: to-rem(24);
     }
@@ -21,5 +23,6 @@
         background: transparent;
         text-decoration: underline;
         color: var(--slate-700);
+        cursor: pointer;
     }
 }

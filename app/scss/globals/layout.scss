@@ -1,10 +1,13 @@
 @use '../util/' as *;
 .container {
-    // max-width: to-rem(920);
-    max-width: none;
+    max-width: to-rem(1440);
     background: var(--white);
     display: flex;
     flex-direction: column;
+    margin-bottom: to-rem(20);
+    @include breakpoint-down(small) {
+        min-height: 100vh;
+    }
     @include breakpoint(medium) {
         flex-direction: row;
         align-items: stretch;
