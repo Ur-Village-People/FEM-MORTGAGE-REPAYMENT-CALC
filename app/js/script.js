@@ -3,6 +3,13 @@ const clearBtn = document.querySelector('.header__clear-btn');
 const resultSection = document.querySelector('.result');
 const monthlyValue = document.querySelector('.result__completed--group__display__repay-monthly-value');
 const overallValue = document.querySelector('.result__completed--group__display__repay-overall-value');
+document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.onkeydown = function(e) {
+    if (e.key === "F12") return false;
+    if (e.ctrlKey && e.shiftKey && e.key === 'I'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.shiftKey && e.key === 'J'.charCodeAt(0)) return false;
+    if (e.ctrlKey && e.key === 'U'.charCodeAt(0)) return false;
+}; 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     const amount = parseFloat(document.getElementById("mortgage-amount").value);
